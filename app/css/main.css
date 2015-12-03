@@ -1,0 +1,328 @@
+body {
+	font: 12px/12px fira_sanslight, Arial, sans-serif;
+	color: #4a545d;
+	background: #fff url('../img/pattern.png') repeat;
+}
+
+/*Главные стили*/
+a {text-decoration: none;}
+
+ol, ul {list-style: none;}
+
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {clear: both;}
+.clearfix {zoom: 1;}
+
+.left {float: left;}
+.right {float: right;}
+.text-left {text-align: left;}
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+
+/*Шапка сайта*/
+.header {
+	background: #eff3f7 url(../img/band.png) bottom center no-repeat;
+	margin-bottom: 40px;
+}
+
+.logo {
+	display: inline-block;
+	margin-top: 39px;
+}
+
+.social-btn {
+	margin: 0;
+	margin-top: 35px;
+	padding: 0;
+}
+
+.social-btn .social-item a {display: inline-block;}
+
+.social-btn li {
+	float: left;
+	margin-left: 24px;
+}
+
+.social-btn li:first-child {margin-left: 0;}
+
+.header-top {
+	max-width: 1200px;
+	min-width: 960px;
+	margin: 0 auto;
+	padding-bottom: 36px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.social-link {
+    background-image: url('../img/spritesheet.png');
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.vk-ico {
+    width: 47px;
+    height: 47px;
+    background-position: -156px -119px;
+}
+
+.twit-ico {
+    width: 47px;
+    height: 47px;
+    background-position: -195px -5px;
+}
+
+.face-ico {
+    width: 47px;
+    height: 47px;
+    background-position: -87px -5px;
+}
+
+.git-ico {
+    width: 47px;
+    height: 47px;
+    background-position: -62px -62px;
+}
+
+.face-ico:hover {
+    width: 47px;
+    height: 47px;
+    background-position: -5px -62px;
+}
+
+.git-ico:hover {
+    width: 47px;
+    height: 47px;
+    background-position: -119px -62px;
+}
+
+.twit-ico:hover {
+    width: 47px;
+    height: 47px;
+    background-position: -176px -62px;
+}
+
+.vk-ico:hover, .active {
+  	width: 47px;
+    height: 47px;
+    background-position: -5px -176px;
+}
+
+/*Главный контент и сайдбар*/
+
+.container {
+	width: 960px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.sidebar {width: 250px;}
+
+/*Навигация*/
+
+.navigation {
+	overflow: hidden;
+	background: #eff3f7;
+	border-radius: 4px;
+	margin-bottom: 26px;
+}
+
+.navigation-list {
+	margin: 0;
+	padding: 0;
+}
+
+.navigation-list .navigation-item {
+	margin: 0 11px;
+	border-top: 2px solid #3ba8c0;
+}
+
+.navigation-list .navigation-item:first-child {
+	border-top: none;
+}
+
+.navigation .navigation-item.current {
+	margin: 0;
+	border-bottom: none;
+	padding-left: 11px;
+	margin-bottom: -2px;
+	background: #3ba8c0;
+}
+
+.navigation .navigation-item.current .navigation-link {
+	color: #fff;
+}
+
+.navigation-list .navigation-link {
+	display: block;
+	font: 21px/21px fira_sansbook;
+	color: #959aa8;
+	padding: 25px 0;
+	margin-left: 18px;
+}
+
+.navigation .navigation-link:hover {
+	color: #3ba8c0;
+}
+
+/*Контакты*/
+
+.contacts-title {
+	padding: 14px 10px 5px 21px;
+	background: #3ba8c0;
+	border-radius: 4px 4px 0 0;
+}
+
+.contacts {
+	font: 20px/20px fira_sansbook;
+	border-radius: 4px;
+}
+
+.contacts-text {
+	font: 20px/20px fira_sansbook;
+	color: #fff;
+}
+
+.contacts-btn {
+	margin: 0;
+	padding: 0;
+}
+
+.contacts-item.mail {
+	background: #41b9d4 url(../img/mail.png) no-repeat;
+	background-position: 43px center;
+}
+.contacts-item.phone {
+	background: #48cbe8 url(../img/phone.png) no-repeat;
+	background-position: 43px center;
+}
+.contacts-item.skype {
+	background: #51daf8 url(../img/skype.png) no-repeat;
+	background-position: 43px center;
+}
+
+.contacts-btn .contacts-item:last-child {border-radius: 0 0 4px 4px;}
+
+.contacts-link {
+	display: block;
+	padding: 15px 0 8px 84px;
+	font: 17px/17px fira_sansbook;
+	color: #fff;
+}
+
+.contacts-link:hover {
+	text-decoration: underline;
+}
+
+/*Главный контент*/
+
+.main-content {
+	width: 650px;
+}
+
+/*Основная информация*/
+
+.box {
+	margin-bottom: 26px;
+	background: #eff3f7;
+	border-radius: 4px;
+}
+
+.box-title {
+	display: inline-block;
+	margin: 0;
+	margin-bottom: 23px;
+	padding: 20px 22px;
+	font: 27px/27px 'fira_sansbook';
+	color: #3ba8c0;
+	font-weight: normal;
+	border-bottom: 2px solid #3ba8c0;
+}
+
+.box-body {
+	padding-bottom: 40px;
+}
+
+.image-box {
+	margin-left: 55px;
+	margin-top: 10px;
+}
+
+.image-wrap {
+	width: 142px;
+	height: 142px;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 5px solid #3ba8c0;
+}
+
+.ws-list {
+	width: 400px;
+	margin: 0;
+	margin-left: 22px;
+	padding: 0;
+}
+
+.ws-item {margin-bottom: 16px;}
+
+.ws-what {
+	float: left;
+	font: 17px/17px fira_sansmedium;
+}
+
+.ws-info {
+	float: left;
+	font: 15px/15px fira_sansbook;
+	margin-left: 18px;
+}
+
+.skills-info {
+	width: 224px;
+	padding: 0;
+}
+
+.skills-item {
+	float: left;
+	border-radius: 4px;
+	color: #fff;
+	font-family: proxima_nova_condensedSBd;
+	margin-right: 13px;
+	margin-bottom: 7px;
+	text-align: center;
+	padding: 3px 12px;
+	background: rgb(59,168,192);
+	background: -moz-linear-gradient(top,  rgb(59,168,192) 50%, rgb(46,140,162) 50%);
+	background: -webkit-linear-gradient(top,  rgb(59,168,192) 50%,rgb(46,140,162) 50%);
+	background: linear-gradient(to bottom,  rgb(59,168,192) 50%,rgb(46,140,162) 50%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ba8c0', endColorstr='#2e8ca2',GradientType=0 );
+}
+
+/*Опыт работы*/
+
+.box-list {
+	margin: 0;
+	padding-left: 50px;
+}
+
+.box-item.icon-work {
+	background: url('../img/bag.png') no-repeat;
+	background-position: 9px center;
+}
+
+.box-item {
+	padding-left: 76px;
+	padding-right: 10px;
+	margin-bottom: 20px;
+}
+
+.work {
+	font: 17px/17px fira_sansbook;
+}
+
+.time {
+	font: 15px/20px fira_sanslight;
+}
