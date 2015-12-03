@@ -1,5 +1,8 @@
+html {height: 100%;}
+
 body {
-	font: 12px/12px fira_sanslight, Arial, sans-serif;
+	height: 100%;
+	font: 12px/12px 'fira_sanslight', Arial, sans-serif;
 	color: #4a545d;
 	background: #fff url('../img/pattern.png') repeat;
 }
@@ -23,32 +26,30 @@ ol, ul {list-style: none;}
 .text-center {text-align: center;}
 .text-right {text-align: right;}
 
+/*Прибивем футер к низу*/
+.wrapper {
+	position: relative;
+	min-height: 100%;
+	min-width: 970px;
+	height: auto;
+	overflow: hidden;
+}
+.wrapper:after {
+	content: "";
+	height: 80px;
+	display: block;
+}
+.page-footer {
+	min-width: 970px;
+	height: 80px;
+	margin-top: -80px;
+}
+
 /*Шапка сайта*/
 .header {
-	background: #eff3f7 url(../img/band.png) bottom center no-repeat;
+	background: #eff3f7 url('../img/band.png') bottom center no-repeat;
 	margin-bottom: 40px;
 }
-
-.logo {
-	display: inline-block;
-	margin-top: 39px;
-}
-
-.social-btn {
-	margin: 0;
-	margin-top: 35px;
-	padding: 0;
-}
-
-.social-btn .social-item a {display: inline-block;}
-
-.social-btn li {
-	float: left;
-	margin-left: 24px;
-}
-
-.social-btn li:first-child {margin-left: 0;}
-
 .header-top {
 	max-width: 1200px;
 	min-width: 960px;
@@ -57,73 +58,47 @@ ol, ul {list-style: none;}
 	padding-left: 10px;
 	padding-right: 10px;
 }
-
-.social-link {
-    background-image: url('../img/spritesheet.png');
-    background-repeat: no-repeat;
-    display: block;
+.header-top .logo {
+	display: inline-block;
+	margin-top: 39px;
 }
-
-.vk-ico {
-    width: 47px;
-    height: 47px;
-    background-position: -156px -119px;
+.header-top .header-logo-txt {
+	position: absolute;
+	left: -9999px;
 }
-
-.twit-ico {
-    width: 47px;
-    height: 47px;
-    background-position: -195px -5px;
+.header-top .social-btn {
+	margin: 0;
+	margin-top: 35px;
+	padding: 0;
 }
-
-.face-ico {
-    width: 47px;
-    height: 47px;
-    background-position: -87px -5px;
+.social-btn {
+	font-size: 0;
 }
-
-.git-ico {
-    width: 47px;
-    height: 47px;
-    background-position: -62px -62px;
+.social-btn .social-link {
+	display: inline-block;
+	width: 47px;
+  height: 47px;
+  background-image: url('../img/sprite-ico.png');
+  background-repeat: no-repeat;
+	margin-left: 24px;
 }
-
-.face-ico:hover {
-    width: 47px;
-    height: 47px;
-    background-position: -5px -62px;
-}
-
-.git-ico:hover {
-    width: 47px;
-    height: 47px;
-    background-position: -119px -62px;
-}
-
-.twit-ico:hover {
-    width: 47px;
-    height: 47px;
-    background-position: -176px -62px;
-}
-
-.vk-ico:hover, .active {
-  	width: 47px;
-    height: 47px;
-    background-position: -5px -176px;
-}
-
+.social-btn .social-link:first-child {margin-left: 0;}
+.social-btn .social-link.vk-ico {background-position: -5px -119px;}
+.social-btn .social-link.vk-ico:hover {background-position: -62px -119px;}
+.social-btn .social-link.twit-ico {background-position: -119px -5px;}
+.social-btn .social-link.twit-ico:hover {background-position: -119px -62px;}
+.social-btn .social-link.face-ico {background-position: -5px -5px;}
+.social-btn .social-link.face-ico:hover {background-position: -62px -5px;}
+.social-btn .social-link.git-ico {background-position: -5px -62px;}
+.social-btn .social-link.git-ico:hover {background-position: -62px -62px;}
 /*Главный контент и сайдбар*/
-
-.container {
+.container-big {
 	width: 960px;
 	margin: 0 auto;
 	padding: 0 10px;
 }
-
 .sidebar {width: 250px;}
-
 /*Навигация*/
-
 .navigation {
 	overflow: hidden;
 	background: #eff3f7;
@@ -131,20 +106,15 @@ ol, ul {list-style: none;}
 	margin-bottom: 26px;
 }
 
-.navigation-list {
+.navigation .navigation-list {
 	margin: 0;
 	padding: 0;
 }
-
 .navigation-list .navigation-item {
 	margin: 0 11px;
 	border-top: 2px solid #3ba8c0;
 }
-
-.navigation-list .navigation-item:first-child {
-	border-top: none;
-}
-
+.navigation-list .navigation-item:first-child {border-top: none;}
 .navigation .navigation-item.current {
 	margin: 0;
 	border-bottom: none;
@@ -152,87 +122,64 @@ ol, ul {list-style: none;}
 	margin-bottom: -2px;
 	background: #3ba8c0;
 }
-
-.navigation .navigation-item.current .navigation-link {
-	color: #fff;
-}
-
-.navigation-list .navigation-link {
+.navigation .navigation-item.current .navigation-link {color: #fff;}
+.navigation-item .navigation-link {
 	display: block;
-	font: 21px/21px fira_sansbook;
+	font: 21px/21px 'fira_sansbook';
 	color: #959aa8;
 	padding: 25px 0;
 	margin-left: 18px;
 }
-
-.navigation .navigation-link:hover {
-	color: #3ba8c0;
-}
-
+.navigation-item .navigation-link:hover {color: #3ba8c0;}
 /*Контакты*/
-
-.contacts-title {
+.contacts {
+	font: 20px/20px 'fira_sansbook';
+	border-radius: 4px;
+}
+.contacts .contacts-title {
 	padding: 14px 10px 5px 21px;
 	background: #3ba8c0;
 	border-radius: 4px 4px 0 0;
 }
-
-.contacts {
-	font: 20px/20px fira_sansbook;
-	border-radius: 4px;
-}
-
-.contacts-text {
-	font: 20px/20px fira_sansbook;
+.contacts-title .contacts-text {
+	font: 20px/20px 'fira_sansbook';
 	color: #fff;
 }
-
-.contacts-btn {
+.contacts .contacts-btn {
 	margin: 0;
 	padding: 0;
 }
-
-.contacts-item.mail {
-	background: #41b9d4 url(../img/mail.png) no-repeat;
+.contacts-btn .contacts-item.mail {
+	background: #41b9d4 url('../img/mail.png') no-repeat; 
 	background-position: 43px center;
 }
-.contacts-item.phone {
-	background: #48cbe8 url(../img/phone.png) no-repeat;
+.contacts-btn .contacts-item.phone {
+	background: #48cbe8 url('../img/phone.png') no-repeat;
 	background-position: 43px center;
 }
-.contacts-item.skype {
-	background: #51daf8 url(../img/skype.png) no-repeat;
+.contacts-btn .contacts-item.skype {
+	background: #51daf8 url('../img/skype.png') no-repeat;
 	background-position: 43px center;
 }
-
 .contacts-btn .contacts-item:last-child {border-radius: 0 0 4px 4px;}
-
-.contacts-link {
+.contacts-btn .contacts-link {
 	display: block;
 	padding: 15px 0 8px 84px;
-	font: 17px/17px fira_sansbook;
+	font: 17px/17px 'fira_sansbook';
 	color: #fff;
 }
-
-.contacts-link:hover {
+.contacts-btn .contacts-link:hover {
 	text-decoration: underline;
 }
-
 /*Главный контент*/
-
-.main-content {
-	width: 650px;
-}
-
+.main-content {width: 650px;}
 /*Основная информация*/
-
 .box {
 	margin-bottom: 26px;
 	background: #eff3f7;
 	border-radius: 4px;
 }
-
-.box-title {
+.box .box-title {
 	display: inline-block;
 	margin: 0;
 	margin-bottom: 23px;
@@ -242,54 +189,45 @@ ol, ul {list-style: none;}
 	font-weight: normal;
 	border-bottom: 2px solid #3ba8c0;
 }
-
-.box-body {
-	padding-bottom: 40px;
+.box .box-body {
+	padding-bottom: 34px;
 }
-
-.image-box {
+.box-body .image-box {
 	margin-left: 55px;
 	margin-top: 10px;
 }
-
-.image-wrap {
+.image-box .image-wrap {
 	width: 142px;
 	height: 142px;
 	border-radius: 50%;
 	overflow: hidden;
 	border: 5px solid #3ba8c0;
 }
-
-.ws-list {
+.box-body .ws-list {
 	width: 400px;
 	margin: 0;
 	margin-left: 22px;
 	padding: 0;
 }
-
-.ws-item {margin-bottom: 16px;}
-
-.ws-what {
+.ws-list .ws-item {margin-bottom: 16px;}
+.ws-item .ws-what {
 	float: left;
-	font: 17px/17px fira_sansmedium;
+	font: 17px/17px 'fira_sansmedium';
 }
-
-.ws-info {
+.ws-item .ws-info {
 	float: left;
-	font: 15px/15px fira_sansbook;
-	margin-left: 18px;
+	font: 15px/15px 'fira_sansbook';
+	margin-left: 21px;
 }
-
-.skills-info {
+.ws-info .skills-info {
 	width: 224px;
 	padding: 0;
 }
-
-.skills-item {
+.skills-info .skills-item {
 	float: left;
 	border-radius: 4px;
 	color: #fff;
-	font-family: proxima_nova_condensedSBd;
+	font-family: 'proxima_nova_condensedSBd';
 	margin-right: 13px;
 	margin-bottom: 7px;
 	text-align: center;
@@ -300,29 +238,68 @@ ol, ul {list-style: none;}
 	background: linear-gradient(to bottom,  rgb(59,168,192) 50%,rgb(46,140,162) 50%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ba8c0', endColorstr='#2e8ca2',GradientType=0 );
 }
-
 /*Опыт работы*/
-
-.box-list {
+.box-body .box-list {
 	margin: 0;
 	padding-left: 50px;
 }
-
 .box-item.icon-work {
 	background: url('../img/bag.png') no-repeat;
 	background-position: 9px center;
 }
-
 .box-item {
 	padding-left: 76px;
 	padding-right: 10px;
-	margin-bottom: 20px;
+	margin-bottom: 16px;
 }
-
-.work {
-	font: 17px/17px fira_sansbook;
+.box-item .place {font: 17px/22px 'fira_sansbook';}
+.box-item .time {font: 15px/20px 'fira_sanslight';}
+/*Образование*/
+.box-item.icon-university {
+	background: url('../img/hat.png') no-repeat;
+	background-position: 9px center;
 }
-
-.time {
-	font: 15px/20px fira_sanslight;
+.box-item.icon-course {
+	background: url('../img/doc.png') no-repeat;
+	background-position: 19px center;
+}
+/*Футер*/
+.page-footer {
+	background: #eff3f7 url('../img/band.png') top center no-repeat;
+	font-family: 'fira_sanslight';
+	color: #4a545d;
+}
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+.page-footer .container {
+	padding-top: 23px;
+	position: relative;
+}
+.page-footer .copyright {
+	margin: 0 180px;
+	padding-top: 7px;
+	text-align: center;
+	font-size: 13px;
+}
+/*Логин*/
+.page-footer .lock {
+	position: absolute;
+	top: 26px;
+	left: 32px;
+}
+.lock .lock-inner {
+	display: block;
+	height: 40px;
+	font: 16px/16px 'fira_sansbook';
+	color: #4a545d;
+	text-decoration: none;
+	background: url('../img/lock.png') no-repeat;
+	padding-left: 24px;
+	line-height: 40px;
+}
+.lock .lock-inner:hover {
+	text-decoration: underline;
+	background: url('../img/lock-hover.png') no-repeat;
 }
