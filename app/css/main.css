@@ -81,6 +81,7 @@ ol, ul {list-style: none;}
   background-image: url('../img/sprite-ico.png');
   background-repeat: no-repeat;
 	margin-left: 24px;
+	text-indent: -9999px;
 }
 .social-btn .social-link:first-child {margin-left: 0;}
 .social-btn .social-link.vk-ico {background-position: -5px -119px;}

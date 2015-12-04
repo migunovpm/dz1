@@ -106,7 +106,6 @@ ol, ul {list-style: none;}
 	border-radius: 4px;
 	margin-bottom: 26px;
 }
-
 .navigation .navigation-list {
 	margin: 0;
 	padding: 0;
@@ -176,6 +175,7 @@ ol, ul {list-style: none;}
 .main-content {width: 650px;}
 /*Основная информация*/
 .box {
+	min-height: 840px;
 	margin-bottom: 26px;
 	background: #eff3f7;
 	border-radius: 4px;
@@ -190,80 +190,123 @@ ol, ul {list-style: none;}
 	font-weight: normal;
 	border-bottom: 2px solid #3ba8c0;
 }
-.box .box-body {
-	padding-bottom: 34px;
-}
-.box-body .image-box {
-	margin-left: 55px;
-	margin-top: 10px;
-}
-.image-box .image-wrap {
-	width: 142px;
-	height: 142px;
-	border-radius: 50%;
-	overflow: hidden;
-	border: 5px solid #3ba8c0;
-}
-.box-body .ws-list {
-	width: 400px;
-	margin: 0;
-	margin-left: 22px;
+.box .works-list {
+	width: 610px;
 	padding: 0;
+	margin: 0 auto;
 }
-.ws-list .ws-item {margin-bottom: 16px;}
-.ws-item .ws-what {
+.work-item {
+	width: 183px;
 	float: left;
-	font: 17px/17px 'fira_sansmedium';
+	margin-right: 30px;
+	margin-bottom: 40px;
 }
-.ws-item .ws-info {
-	float: left;
-	font: 15px/15px 'fira_sansbook';
-	margin-left: 21px;
+.work-item:nth-child(3n) {
+	margin-right: 0;
 }
-.ws-info .skills-info {
-	width: 224px;
-	padding: 0;
-}
-.skills-info .skills-item {
-	float: left;
+.work-item .work-img {
+	width: 179px;
+	height: 125px;
+	margin-bottom: 11px;
+	border: 2px solid #3ba8c0;
 	border-radius: 4px;
-	color: #fff;
-	font-family: 'proxima_nova_condensedSBd';
-	margin-right: 13px;
-	margin-bottom: 7px;
+	overflow: hidden;
+}
+.work-item .work-link {
+	display: block;
+	margin-bottom: 15px;
+	font: 13px/13px 'fira_sanslight_italic';
+	color: #3ba8c0;
 	text-align: center;
-	padding: 3px 12px;
-	background: rgb(59,168,192);
-	background: -moz-linear-gradient(top,  rgb(59,168,192) 50%, rgb(46,140,162) 50%);
-	background: -webkit-linear-gradient(top,  rgb(59,168,192) 50%,rgb(46,140,162) 50%);
-	background: linear-gradient(to bottom,  rgb(59,168,192) 50%,rgb(46,140,162) 50%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ba8c0', endColorstr='#2e8ca2',GradientType=0 );
 }
-/*Опыт работы*/
-.box-body .box-list {
+.work-item .work-descr {
 	margin: 0;
-	padding-left: 50px;
+	font: 15px/15px 'fira_sanslight';
+	word-spacing: 3px;
+	text-align: center;
 }
-.box-item.icon-work {
-	background: url('../img/bag.png') no-repeat;
-	background-position: 9px center;
+.add-work {
+	height: 129px;
+	background-color: rgba(236, 251, 255, 0.64);
+	border: 1px dashed #3ba8c0;
+  border-radius: 4px;
 }
-.box-item {
-	padding-left: 76px;
-	padding-right: 10px;
-	margin-bottom: 16px;
+.add-work-link {
+	height: 100%;
+	display: block;
+	background: url('../img/add_work.png') no-repeat;
+	background-position: center 35px;
 }
-.box-item .place {font: 17px/22px 'fira_sansbook';}
-.box-item .time {font: 15px/20px 'fira_sanslight';}
-/*Образование*/
-.box-item.icon-university {
-	background: url('../img/hat.png') no-repeat;
-	background-position: 9px center;
+.add-work-txt {
+	margin: 0;
+	padding-top: 80px;
+	text-align: center;
+	font-size: 13px;
+	color: #3ba8c0;
 }
-.box-item.icon-course {
-	background: url('../img/doc.png') no-repeat;
-	background-position: 19px center;
+/*Анимация для блоков работ - начало*/
+.effect {
+  position: relative;
+} 
+.effect img {
+  width: 100%;
+  height: 100%;
 }
+.eff-3-3 {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+.eff-3-3 .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(1, 108, 164, 0.75);
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  opacity: 0;
+  -o-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -webkit-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+.eff-3-3 .caption a.btn {
+  width: 65px;
+  border: 2.5px solid #eff3f7;
+	border-radius: 5px;
+  text-align: center;
+  display: block;
+  color: #fff;
+  padding: 3px 0px;
+  margin: 0px auto 0px auto;
+  position: relative;
+  top: 50%;
+  font: 13px/13px 'fira_sansbook';
+  -webkit-transform: scale(0.25);
+  -moz-transform: scale(0.25);
+  -ms-transform: scale(0.25);
+  -o-transform: scale(0.25);
+  transform: scale(0.25);
+  -o-transition: top 0.3s linear 0s, -o-transform 0.3s linear 0.3s;
+  -moz-transition: top 0.3s linear 0s, -moz-transform 0.3s linear 0.3s;
+  -webkit-transition:top 0.3s linear 0s, -webkit-transform 0.3s linear 0.3s;
+  -ms-transition: top 0.3s linear 0s, -ms-transform 0.3s linear 0.3s;
+  transition: top 0.3s linear 0s, transform 0.3s linear 0.3s;
+}
+.eff-3-3:hover .caption {
+  opacity: 1;
+}
+.eff-3-3:hover .caption a.btn {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  top: 45%;
+}
+/*Анимация для блоков работ - конец*/ 
 /*Футер*/
 .page-footer {
 	background: #eff3f7 url('../img/band.png') top center no-repeat;
@@ -304,3 +347,6 @@ ol, ul {list-style: none;}
 	text-decoration: underline;
 	background: url('../img/lock-hover.png') no-repeat;
 }
+
+
+
