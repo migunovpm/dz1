@@ -176,7 +176,7 @@ ol, ul {list-style: none;}
 /*Основная информация*/
 .box {
 	min-height: 840px;
-	margin-bottom: 26px;
+	margin-bottom: 35px;
 	background: #eff3f7;
 	border-radius: 4px;
 }
@@ -191,18 +191,20 @@ ol, ul {list-style: none;}
 	border-bottom: 2px solid #3ba8c0;
 }
 .box .works-list {
-	width: 610px;
-	padding: 0;
+	width: 640px;
+	padding: 0 5px;
 	margin: 0 auto;
+	overflow: hidden;
+	font-size: 0;
 }
 .work-item {
 	width: 183px;
-	float: left;
-	margin-right: 30px;
-	margin-bottom: 40px;
-}
-.work-item:nth-child(3n) {
-	margin-right: 0;
+	display: inline-block;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom: 30px;
+	overflow: hidden;
+	vertical-align: top;
 }
 .work-item .work-img {
 	width: 179px;
@@ -214,13 +216,14 @@ ol, ul {list-style: none;}
 }
 .work-item .work-link {
 	display: block;
-	margin-bottom: 15px;
+	padding: 2px 0;
 	font: 13px/13px 'fira_sanslight_italic';
 	color: #3ba8c0;
 	text-align: center;
 }
 .work-item .work-descr {
 	margin: 0;
+	padding: 12px 0;
 	font: 15px/15px 'fira_sanslight';
 	word-spacing: 3px;
 	text-align: center;
@@ -318,12 +321,11 @@ ol, ul {list-style: none;}
 	margin: 0 auto;
 }
 .page-footer .container {
-	padding-top: 23px;
+	padding-top: 40px;
 	position: relative;
 }
 .page-footer .copyright {
 	margin: 0 180px;
-	padding-top: 7px;
 	text-align: center;
 	font-size: 13px;
 }
@@ -348,5 +350,6 @@ ol, ul {list-style: none;}
 	background: url('../img/lock-hover.png') no-repeat;
 }
 
-
-
+.no-opacity {
+	background: #3ba;
+}
