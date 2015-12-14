@@ -1,0 +1,166 @@
+html {height: 100%;}
+
+body {
+	height: 100%;
+	font: 12px/12px 'fira_sanslight', Arial, sans-serif;
+	color: #4a545d;
+	background: #fff url('../img/pattern.png') repeat;
+}
+
+/*Главные стили*/
+a {text-decoration: none;}
+
+ol, ul {list-style: none;}
+
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {clear: both;}
+.clearfix {zoom: 1;}
+
+.left {float: left;}
+.right {float: right;}
+.text-left {text-align: left;}
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+
+/*Прибивем футер к низу*/
+.wrapper {
+	position: relative;
+	min-height: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.wrapper:after {
+	content: "";
+	height: 80px;
+	display: block;
+}
+.page-footer {
+	min-width: 970px;
+	height: 80px;
+	margin-top: -80px;
+}
+/*Прибивем футер к низу (конец)*/
+.login-form-outer {
+  width: 100%;
+  min-height: 600px;
+  text-align: center;
+  position: relative;
+}
+.login-form-outer:before {
+  content: '';
+  height: 100%;
+  width: 0px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.login-form-inner {
+	position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: 590px;
+  height: 484px;
+  background: #eff3f7;
+	border-radius: 3px;
+	box-shadow: 0 4px 6.9px 0.1px rgba(13, 16, 7, 0.29);
+}
+.login-form-title {
+	margin: 0;
+	margin-bottom: 25px;
+	padding: 27px 0;
+	background: #48cbe8;
+	font: 40px/40px 'fira_sansbook';
+	color: #fff;
+	border-radius: 3px 3px 0 0;
+	border-bottom: 15px solid #67dffa;
+}
+.login-form {
+	width: 424px;
+	margin: 0 auto;
+}
+.labelclass {
+  text-align: center;
+  font: 37px/37px 'fira_sanslight';
+  color: #959aa8;
+  margin-bottom: 8px;
+}
+.inputfield {
+  height: 60px;
+  width: 404px;
+  font: 17px/17px 'fira_sanslight';
+  outline: none;
+  border-radius: 2px;
+  border: 1px solid #48cbe8;
+  color: #48cbe8;
+  padding-left: 16px;
+  margin-bottom: 20px;
+}
+.btn-wrap {
+	padding-top: 17px;
+}
+.login-btn {
+  display: block;
+  color: #fff;
+  text-align: center;
+  font: 36px/36px 'fira_sansbook';
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 0 auto;
+  background-color: #48cbe8;
+  border: 0px #48cbe8;
+  box-shadow: 0 3px 0 0 #3ba8c0;
+  padding: 7px 62px;
+}
+.login-btn:hover {
+	box-shadow: none;
+  margin-top: 3px;
+}
+::-webkit-input-placeholder {
+	font: 17px/28px 'fira_sanslight';
+	color: #48cbe8;
+}
+::-webkit-textarea-placeholder {
+	font: 17px/28px 'fira_sanslight';
+	color: #48cbe8;
+}
+::-moz-placeholder {
+	font: 17px/28px 'fira_sanslight';
+	color: #48cbe8;
+}
+::ms-input-placeholder {
+	font: 17px/28px 'fira_sanslight';
+	color: #48cbe8;
+}
+::ms-textarea-placeholder {
+	font: 17px/28px 'fira_sanslight';
+	color: #48cbe8;
+}
+::-o-placeholder {
+	font: 17px/28px 'fira_sanslight';
+	color: #48cbe8;
+}
+/*Футер*/
+.page-footer {
+	background: #eff3f7 url('../img/band.png') top center no-repeat;
+	font-family: 'fira_sanslight';
+	color: #4a545d;
+}
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+.page-footer .container {
+	padding-top: 40px;
+	position: relative;
+}
+.page-footer .copyright {
+	margin: 0 180px;
+	text-align: center;
+	font-size: 13px;
+}

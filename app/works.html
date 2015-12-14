@@ -90,7 +90,7 @@
                         </div>
                     </div>
                     <a href="#" class="work-link">www.site.ru</a>
-                    <p class="work-descr">Информация о проекте 1 превью 2 строки....</p>
+                    <p class="work-descr">Информация о проекте 2 превью 2 строки....</p>
                 </li>
                 <li class="work-item">
                     <div class="work-img effect eff-3-3">
@@ -110,10 +110,10 @@
                         </div>
                     </div>
                     <a href="#" class="work-link">www.site.ru</a>
-                    <p class="work-descr">Информация о проекте 1 превью 2 строки....</p>
+                    <p class="work-descr">Информация о проекте 4 превью 2 строки....</p>
                 </li>
                 <li class="work-item add-work">
-                    <a href="#" class="add-work-link">
+                    <a href="#" id="add-new-item" class="add-work-link">
                         <p class="add-work-txt">Добавить проект</p>
                     </a>
                 </li>
@@ -125,11 +125,43 @@
 </div>
 <!-- Главный контент и сайдбар -->
 </div>
+<div class="modal-window" id="new-project-popup">
+    <div class="about">
+        <h3 class="about-title">
+            Добавление проекта
+        </h3>
+        <div class="in-about-close b-close">x</div>
+    </div>
+    <!-- Всплывающее окно -->
+    <div class="modal-form">
+        <form action="" id="modal-window-form" class="form">
+            <label for="nameProject" class="class-label">Название проекта</label>
+            <input type="text" name="nameProject" id="nameProject" class="inputfield" placeholder="Введите название" qtip-content="Вы не ввели название">
+            <div class="form-group">                        
+                <div class="fileupload-wrapper" id="uploadfile">
+                    <span class="label">Картинка проекта</span>
+                    <label class="fileupload-lable">
+                        <input id="fileupload" class="fileupload" type="file" name="files[]">
+                        <input id="fileurl" type="hidden" name="fileurl">
+                    </label>
+                    <input id="filename" type="text" class="input" name="filename" placeholder="Загрузите изображение" disabled="" qtip-content="Вы не выбрали изображение" qtip-position="left">
+                </div>
+            </div>
+            
+            <label for="urlProject" class="class-label">URL проекта</label>
+            <input type="text" name="urlProject" id="urlProject" class="inputfield" placeholder="Добавте ссылку" qtip-content="Вы не ввели ссылку">
+            <label for="leterProject" class="class-label">Описание</label>
+            <textarea name="leterProject" id="leterProject" cols="30" rows="10" placeholder="Пара слов о Вашем проекте" class="inputarea" qtip-content="Вы не ввели описание"></textarea>   
+            <input type="submit" class="submit-btn" id="Submit" value="Добавить">       
+        </form>
+    </div>
+        <!-- Всплывающее окно -->
+</div>
 <!-- Конец кода -->
 <footer class="page-footer">
 <div class="container">
     <div class="lock">
-        <a href="#" class="lock-inner">Войти</a>
+        <a href="/login.html" class="lock-inner">Войти</a>
     </div>
     <div class="copyright">&copy; 2015, Это мой сайт, пожалуйста, не копируйте и не воруйте его
     </div>
@@ -137,6 +169,7 @@
 </footer>
 <!-- Подключаем скрипты -->
 <script src="bower/jquery/dist/jquery.js"></script>
-<script src="js/main.js"></script>
+<script src="bower/bPopup/jquery.bpopup.js"></script>
+<script src="js/add_project.js"></script>
 </body>
 </html>
