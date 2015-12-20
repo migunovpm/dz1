@@ -1,9 +1,12 @@
 {
   "name": "dz1_migunov",
   "dependencies": {
-    "jquery": "~2.1.4",
     "normalize-css": "normalize.css#~3.0.3",
     "modernizer": "~2.8.2",
-    "bPopup": "bpopup#~0.11.0"
-  }
+    "bPopup": "bpopup#~0.11.0",
+    "jquery-placeholder": "~2.3.0",
+    "qtip2": "~2.2.1",
+    "jquery": "1.11"
+  },
+  "devDependencies": {}
 }

@@ -17,6 +17,7 @@
     <!-- bower CSS -->
     <link rel="stylesheet" type="text/css" href="bower/normalize-css/normalize.css">
     <!-- CSS -->
+    <link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
     <link rel="stylesheet" type="text/css" href="css/login-form.css">
     <!-- Fonts -->
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
@@ -35,11 +36,11 @@
             <h3 class="login-form-title">
                 Авторизируйтесь
             </h3>
-            <form class="login-form">
+            <form id="form-login">
                 <div class="labelclass">Логин</div>
-                <input type="text" id="login" name="login" placeholder="Введите логин" class="inputfield" qtip-content="Вы не ввели логин">
+                <input type="text" id="login" name="login" placeholder="Введите логин" class="inputfield input" qtip-content="Вы не ввели логин">
                 <div class="labelclass">Пароль</div>
-                <input type="password" id="password" name="password" placeholder="Введите пароль" class="inputfield" qtip-content="Вы не ввели пароль">
+                <input type="password" id="password" name="password" placeholder="Введите пароль" class="inputfield input" qtip-content="Вы не ввели пароль">
                 <div class="btn-wrap">
                  <input type="submit" class="login-btn" id="Submit" value="Войти">
                 </div>
@@ -56,6 +57,8 @@
 </footer>
 <!-- Подключаем скрипты -->
 <script src="bower/jquery/dist/jquery.js"></script>
-<script src="js/main.js"></script>
+<script src="bower/qtip2/jquery.qtip.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/login.js"></script>
 </body>
 </html>

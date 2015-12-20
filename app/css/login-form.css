@@ -164,3 +164,26 @@ ol, ul {list-style: none;}
 	text-align: center;
 	font-size: 13px;
 }
+
+input::-webkit-input-placeholder { color: #48cbe8; font-size: 13px; line-height: 23px;}
+input::-moz-placeholder { color: #48cbe8; font-size: 13px; line-height: 23px;}
+textarea::-webkit-input-placeholder { color: #48cbe8; font-size: 13px; line-height: 23px;}
+textarea:-moz-placeholder  { color: #48cbe8; font-size: 13px; line-height: 23px; }
+
+/* tooltips */
+.qtip-mystyle { 
+    background-color: #f97e76;
+    border-color: #f97e76;
+    font-family: 'Arial';
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.has-error { 
+    background-color: #fad2d1 !important;
+    border-color: #f97e76 !important;
+}
+.has-success { 
+    background-color: none;
+    border-color: #3c763d;
+}

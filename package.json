@@ -2,6 +2,8 @@
   "name": "dz1_migunov",
   "devDependencies": {
     "browser-sync": "^2.10.0",
-    "gulp": "^3.9.0"
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.7",
+    "wiredep": "^3.0.0"
   }
 }
